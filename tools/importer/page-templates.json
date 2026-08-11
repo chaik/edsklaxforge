@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "landing-page",
+      "urls": [
+        "https://chaik.github.io/klaxforge/"
+      ],
+      "coverageGaps": [],
+      "description": "Single-page product landing page for the ClickForge keyboard with header, hero, features grid, configurator, closing CTA, and footer",
+      "blocks": [
+        {
+          "name": "hero-split",
+          "instances": [
+            ".cf-hero"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            ".cf-features-grid"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "name": "Hero",
+          "selector": "section.cf-hero",
+          "style": null,
+          "blocks": ["hero-split"],
+          "defaultContent": []
+        },
+        {
+          "id": "features",
+          "name": "Features",
+          "selector": "section#features",
+          "style": null,
+          "blocks": ["cards-feature"],
+          "defaultContent": [".cf-features-heading"]
+        },
+        {
+          "id": "configurator",
+          "name": "Configurator",
+          "selector": "section#configurator",
+          "style": "configurator",
+          "blocks": [],
+          "defaultContent": ["#configurator p"]
+        },
+        {
+          "id": "closing-cta",
+          "name": "Closing CTA",
+          "selector": "section.cf-closing-cta",
+          "style": "centered",
+          "blocks": [],
+          "defaultContent": [".cf-closing-cta-heading", ".cf-closing-cta-subheading"]
+        }
+      ]
+    }
+  ]
+}

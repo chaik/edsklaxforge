@@ -1,0 +1,10 @@
+{
+  "type": "doc",
+  "sites": {
+    "devlive26-klaxforge1": {
+      "previewOrg": "chaik",
+      "previewSite": "devlive26-klaxforge1",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+/*
+ * brand.css — Design tokens extracted from https://chaik.github.io/klaxforge/
+ * Dark theme, orange accent, Inter typography.
+ */
+
+:root {
+  /* fonts */
+  --heading-font-family: "Inter", helvetica, arial, sans-serif;
+  --body-font-family: "Inter", helvetica, arial, sans-serif;
+
+  /* core colors (dark theme) */
+  --background-color: oklch(16% 0.004 260deg);
+  --text-color: oklch(93% 0.003 260deg);
+  --text-muted-color: oklch(68% 0.006 260deg);
+  --text-faint-color: oklch(55% 0.006 260deg);
+
+  /* accent (orange) */
+  --accent-color: oklch(72% 0.19 45deg);
+  --accent-hover-color: oklch(78% 0.19 45deg);
+  --accent-text-color: oklch(14% 0.01 45deg);
+
+  /* links */
+  --link-color: oklch(75% 0.005 260deg);
+  --link-hover-color: oklch(78% 0.19 45deg);
+
+  /* borders */
+  --border-color: oklch(30% 0.005 260deg);
+  --border-faint-color: oklch(28% 0.005 260deg);
+  --border-dashed-color: oklch(40% 0.006 260deg);
+
+  /* light/dark section helpers (kept for EDS section variants) */
+  --light-color: oklch(22% 0.004 260deg);
+  --dark-color: oklch(12% 0.004 260deg);
+
+  /* spacing / layout */
+  --section-padding-y: 80px;
+  --section-padding-x: 64px;
+  --content-max-width: 1440px;
+  --grid-gap: 48px;
+  --nav-height: 83px;
+
+  /* heading sizes (desktop) */
+  --heading-size-xxl: 64px;
+  --heading-size-xl: 36px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

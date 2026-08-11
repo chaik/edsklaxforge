@@ -1,0 +1,108 @@
+/*
+ * hero-split — split product hero (copy column + product photo).
+ * Values extracted from https://chaik.github.io/klaxforge/ (.cf-hero) computed styles.
+ * The enclosing section wrapper (main > .section > div) already provides
+ * max-width: var(--content-max-width) and horizontal padding, so this block
+ * only adds vertical rhythm and the two-column grid.
+ */
+
+/* Vertical padding only; horizontal padding + max-width come from the section. */
+.hero-split.block {
+  display: grid;
+  gap: 40px;
+  padding: 56px 0;
+  align-items: center;
+}
+
+/* Copy first (top on mobile / left on desktop); media second, though it is
+   first in the DOM. */
+.hero-split .hero-split-copy {
+  order: 1;
+}
+
+.hero-split .hero-split-media {
+  order: 2;
+}
+
+/* Copy column */
+.hero-split .hero-split-copy > div {
+  max-width: 100%;
+}
+
+.hero-split .hero-split-eyebrow {
+  margin: 0 0 20px;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+}
+
+.hero-split h1 {
+  margin: 0 0 24px;
+  color: var(--text-color);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Subheadline: the only unclassed paragraph that is a direct child of the
+   copy cell (the CTA and price paragraphs live inside .hero-split-actions). */
+.hero-split .hero-split-copy > div > p:not(.hero-split-eyebrow) {
+  max-width: 480px;
+  margin: 0 0 40px;
+  color: oklch(72% 0.006 260deg);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+}
+
+/* Actions row: CTA button + "starting at" price, side by side. */
+.hero-split .hero-split-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.hero-split .hero-split-cta {
+  margin: 0;
+}
+
+/* Source CTA is 16px; the global a.button inherits the 19px body size, so pin it. */
+.hero-split .hero-split-cta a.button:any-link {
+  font-size: var(--body-font-size-s);
+}
+
+.hero-split .hero-split-price {
+  margin: 0;
+  color: var(--link-color);
+  font-size: var(--body-font-size-s);
+  line-height: 1.3;
+}
+
+.hero-split .hero-split-price strong {
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+/* Media column — product photo fills its column, no radius/shadow on source. */
+.hero-split .hero-split-media picture {
+  display: block;
+}
+
+.hero-split .hero-split-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (width >= 900px) {
+  .hero-split.block {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--grid-gap);
+    padding: 100px 0;
+  }
+}

@@ -143,6 +143,36 @@ function decorateButtons(main) {
 }
 
 /**
+ * Applies Section Metadata blocks as classes/data on their parent section.
+ * This project's aem.js `decorateSections` does not process section metadata,
+ * so we handle it here (the standard EDS extension point). For each
+ * `.section-metadata` block, the `style` row becomes space-separated classes on
+ * the section and every other row becomes a `data-*` attribute; the block is
+ * then removed so it is not treated as a loadable block.
+ * @param {Element} main The main element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll(':scope > .section .section-metadata').forEach((meta) => {
+    const section = meta.closest('.section');
+    [...meta.children].forEach((row) => {
+      const cells = [...row.children];
+      if (cells.length < 2) return;
+      const key = cells[0].textContent.trim().toLowerCase();
+      const value = cells[1].textContent.trim();
+      if (key === 'style') {
+        value.split(',').forEach((s) => {
+          const cls = s.trim().replace(/\s+/g, '-').toLowerCase();
+          if (cls) section.classList.add(cls);
+        });
+      } else if (key) {
+        section.dataset[key] = value;
+      }
+    });
+    meta.parentElement.remove();
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -151,6 +181,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

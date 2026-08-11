@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-10T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://chaik.github.io/klaxforge/",
+    "originPage": "ClickForge keyboard product landing page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + title + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature/benefit grids (icon + title + description)",
+      "'why us' style highlight sections",
+      "3-up product feature callouts"
+    ],
+    "notSuitableFor": [
+      "cards that need images with call-to-action links per card",
+      "article/news card grids with large photos",
+      "single standalone highlight (use default content instead)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/klaxforge/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-10T00:00:00.000Z"
+  }
+}

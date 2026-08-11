@@ -1,0 +1,31 @@
+/*
+ * price — promotional-price box.
+ * A rounded rectangle with an orange border and faint tinted fill, holding a
+ * small uppercase orange label and a bold price value on one line.
+ */
+
+.price.block {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  border: 1px solid var(--accent-color);
+  border-radius: 6px;
+  background-color: oklch(72% 0.19 45deg / 12%);
+  line-height: 1;
+}
+
+.price.block .price-label {
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price.block .price-value {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 800;
+}

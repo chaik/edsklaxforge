@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-split",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-08-10T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://chaik.github.io/klaxforge/",
+    "originPage": "ClickForge keyboard product landing page",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "product-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "eyebrow + heading + subheading + CTA + image",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product landing pages",
+      "top-of-page hero with a product photo alongside copy",
+      "dark-theme marketing pages"
+    ],
+    "notSuitableFor": [
+      "text-only heroes with no image",
+      "light-theme pages where dark hero styling would clash",
+      "content-dense sections that are not top-of-page banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/klaxforge/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-10T00:00:00.000Z"
+  }
+}

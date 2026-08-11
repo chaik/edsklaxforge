@@ -1,20 +1,42 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-faint-color);
+  color: var(--text-faint-color);
+  font-size: 13px;
 }
 
 footer .footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: var(--content-max-width);
+  padding: 24px;
+  text-align: center;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+/* logo: monospace, muted light — matches the source footer wordmark */
+footer .footer .footer-logo {
+  color: var(--link-color);
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", menlo, monospace;
+  font-weight: 700;
+}
+
+footer .footer .footer-copyright {
+  color: var(--text-faint-color);
+}
+
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    padding: 32px var(--section-padding-x);
+    text-align: left;
   }
 }
