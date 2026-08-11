@@ -46,7 +46,7 @@ export default async function decorate(block) {
   let priceBlock = null;
   const priceTable = cell.querySelector('table');
   if (priceTable) {
-    const dataRow = priceTable.querySelector('tbody tr') || priceTable.querySelector('tr:last-child');
+    const dataRow = priceTable.querySelector('tr:last-child');
     const values = dataRow ? [...dataRow.children].map((td) => td.textContent.trim()) : [];
     if (values.length) {
       priceBlock = buildBlock('price', [values]);
