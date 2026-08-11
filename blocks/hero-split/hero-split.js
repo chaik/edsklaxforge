@@ -7,7 +7,7 @@ import { buildBlock, decorateBlock, loadBlock } from '../../scripts/aem.js';
  *   row 2: a cell containing eyebrow <p>, <h1>, subheadline <p>,
  *          CTA <p><a>, and a nested `price` block (promotional-price box)
  * This decorate() tags the columns, promotes the CTA link to a button so it
- * reuses the global button styling, and loads the nested price block.
+ * reuses the global button style, and loads the nested price block.
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
